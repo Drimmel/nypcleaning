@@ -1,0 +1,27 @@
+﻿<ion-content padding class="fullscreen-vertical-center bg-image">
+  <div class="container" text-center>
+    <img class="nyp_logo" block padding-bottom src="./assets/images/logo.png" />
+    <form>
+      <ion-item no-padding color="transparent" class="no-inner-padding form-item-input">
+        <ion-input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="email" placeholder="{{ 'GENERAL_EMAILINPUT_PLACEHOLDER' | translate }}"></ion-input>
+      </ion-item>
+      <ion-item margin-top no-padding color="transparent" class="no-inner-padding form-item-input">
+        <ion-input type="password" placeholder="{{ 'GENERAL_PASSWORDINPUT_PLACEHOLDER' | translate }}"></ion-input>
+      </ion-item>
+      <button class="nyp-btn w-100 size-m" ion-button color="primary" block round text-uppercase margin-vertical (click)="login()">{{ 'LOGIN_LOGINBUTTON_TEXT' | translate }}</button>
+      <button class="nyp-btn w-100 size-m" ion-button color="facebook" block round text-uppercase><img class="facebook-logo" src="./assets/images/facebook-logo.png" /> {{ 'LOGIN_FBBUTTON_TEXT' | translate }}</button>
+    </form>
+    <button ion-button clear text-uppercase color="white" [navPush]="resetPasswordPage">{{ 'LOGIN_FORGOTPASSWORD_TEXT' | translate }}</button>
+  </div>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar color="transparent">
+    <ion-buttons left>
+      <button ion-button clear color="white" [navPush]="registerPage">{{ 'LOGIN_REGISTERBUTTON_TEXT' | translate }}</button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button clear color="white" icon-only right (click)="goToMenu()">{{ 'LOGIN_NO_ACCOUNT_TEXT' | translate }} <ion-icon margin-left name="arrow-forward"></ion-icon></button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
